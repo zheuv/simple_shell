@@ -28,5 +28,6 @@ int str_compare(char *s1, char *s2);
 char *str_concatenate(char *dest, char *src);
 char *str_sprintf(char *str, char *delimiter, char *src);
 char **tokenize_the_input(char *input);
+void handle_sig(int sig);
 
 #endif
