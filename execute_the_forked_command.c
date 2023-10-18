@@ -30,7 +30,7 @@ int execute_the_forked_command(char **args, char *input)
 		if (execute_the_command(args, input) == -1)
 		{
 			perror(input);
-			free(args);
+			free_arguments(args);
 			free(input);
 			exit(EXIT_FAILURE);
 		}

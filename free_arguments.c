@@ -11,6 +11,13 @@
  */
 void free_arguments(char **args)
 {
+	int i;
+
+	for (i = 0; args[i] != NULL; i++)
+	{
+		free(args[i]);
+		args[i] = NULL;
+	}
 	free(args);
 }
 
