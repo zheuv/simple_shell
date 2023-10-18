@@ -22,7 +22,6 @@ int execute_the_forked_command(char **args, char *input);
 int execute_the_command(char **args, char *input);
 int does_command_exist(char **args);
 int check_spaces_tabs(char *str);
-int str_length(char *s);
 char **tokenize_the_input(char *input);
 void handle_sig(int sig);
 void shell_print(char *str);
