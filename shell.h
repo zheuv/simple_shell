@@ -1,14 +1,18 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/types.h>
+#include <string.h>
+#include <errno.h>
+#include <signal.h>
+
 extern char **environ;
+
+
 int my_shell(void);
 ssize_t read_the_input(char **input, size_t *buf_size);
 int validate_the_command(char **args, char *input, int exit_num);
