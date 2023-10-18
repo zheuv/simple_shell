@@ -46,7 +46,7 @@ int main(void)
 			free(input);
 			continue;
 		}
-		execute_the_forked_command(args, input);
+		exit_num = execute_the_forked_command(args, input);
 		if (args != NULL)
 		{
 			free_arguments(args);

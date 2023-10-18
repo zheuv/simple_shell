@@ -29,7 +29,7 @@ int handle_the_builtins(char **args, char *input, int exit_num)
 		free(input);
 		exit(exit_status);
 	}
-	else if (strcmp(args[0], "env") == 0)
+	else if ((strcmp(args[0], "env") == 0) || (strcmp(args[0], "printenv") == 0))
 	{
 		for (env = environ; *env; ++env)
 			printf("%s\n", *env);
