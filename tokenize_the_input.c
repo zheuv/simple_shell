@@ -31,6 +31,6 @@ char **tokenize_the_input(char *input)
 
 	args[index] = NULL;
 	free(token);
-	return args;
+	return (args);
 }
 

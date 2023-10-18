@@ -5,9 +5,9 @@
  * @args: An array of command arguments
  *
  * Description:
- * This function checks if a command specified in the 'args' array exists in the
+ * This function checks if a command specified in the 'args' arra
  * directories specified in the PATH environment variable. It returns 1 if the
- * command is found and is executable, or 0 if it is not found or not executable.
+ * command is found and is executable, or 0 if i
  *
  * Return: 1 if the command exists and is executable, 0 otherwise.
  */

@@ -20,6 +20,8 @@ ssize_t read_the_input(char **input, size_t *buf_size)
 	rd = getline(input, buf_size, stdin);
 	if (rd == -1)
 	{
+		if (!isatty(STDIN_FILENO))
+			return (-1);
 		free(*input);
 		perror("getline()");
 		exit(EXIT_FAILURE);

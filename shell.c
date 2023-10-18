@@ -25,13 +25,11 @@ int main(void)
 		{
 			write(STDOUT_FILENO, "$ ", 2);
 		}
-		else
+		if (read_user_input(&userInput_buf, &buf_size) == -1)
 		{
-			free(input);
-			perror("getline()");
-			exit(EXIT_FAILURE);
+			free(userInput_buf);
+			break;
 		}
-		read_the_input(&input, &buf_size);
 		if (input[0] == '\0')
 		{
 			free(input);

@@ -9,11 +9,11 @@
  * Description:
  * This function validates and handles the user command. It first checks if the
  * command is a built-in command and handles it if it is. If the command is not
- * a built-in, it checks whether the command exists in the system's PATH. If the
- * command does not exist, it displays an error message and frees the argument
+ * a built-in, it checks whether the command exists in the system's
+ * command does not exist, it displays an error message and frees
  * array.
  *
- * Return: 1 on success (command is valid), 0 on failure (command is not valid).
+ * Return: 1 on success (command is valid), 0 on failure
  */
 int validate_the_command(char **args, char *input, int exit_num)
 {

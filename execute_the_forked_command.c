@@ -38,7 +38,7 @@ int execute_the_forked_command(char **args, char *input)
 	if (wait(&status) == -1)
 		perror("wait");
 	if (WIFEXITED(status))
-		return WEXITSTATUS(status);
-	return -1;
+		return (WEXITSTATUS(status));
+	return (-1);
 }
 
