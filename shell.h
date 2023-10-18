@@ -29,5 +29,7 @@ char *str_concatenate(char *dest, char *src);
 char *str_sprintf(char *str, char *delimiter, char *src);
 char **tokenize_the_input(char *input);
 void handle_sig(int sig);
+void shell_print(char *str);
+void printenv(void);
 
 #endif

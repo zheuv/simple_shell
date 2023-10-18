@@ -16,7 +16,6 @@
  */
 int handle_the_builtins(char **args, char *input, int exit_num)
 {
-	char **env;
 	int exit_status = EXIT_SUCCESS;
 
 	if (strcmp(args[0], "exit") == 0)
@@ -31,8 +30,7 @@ int handle_the_builtins(char **args, char *input, int exit_num)
 	}
 	else if ((strcmp(args[0], "env") == 0) || (strcmp(args[0], "printenv") == 0))
 	{
-		for (env = environ; *env; ++env)
-			printf("%s\n", *env);
+		printenv();
 		free_arguments(args);
 		return (1);
 	}
