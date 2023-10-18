@@ -25,9 +25,9 @@ int main(void)
 		{
 			write(STDOUT_FILENO, "$ ", 2);
 		}
-		if (read_user_input(&userInput_buf, &buf_size) == -1)
+		if (read_the_input(&input, &buf_size) == -1)
 		{
-			free(userInput_buf);
+			free(input);
 			break;
 		}
 		if (input[0] == '\0')
